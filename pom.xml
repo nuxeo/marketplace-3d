@@ -13,7 +13,6 @@
 
   <modules>
     <module>marketplace</module>
-    <module>ftest/webdriver</module>
   </modules>
 
   <dependencyManagement>
