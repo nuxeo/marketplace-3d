@@ -1,6 +1,7 @@
 <package type="addon" name="nuxeo-platform-3d" version="@VERSION@">
     <title>Nuxeo Platform 3D</title>
-    <home-page>https://doc.nuxeo.com/</home-page>
+    <description>The Nuxeo Platform 3D addon provides support for 3D file types: canonical views extraction, technical metadata, transformations and 3D previewer for web applications. Those new capabilities can be used for creative process in the textile industry for instance.</description>
+    <home-page>https://doc.nuxeo.com/nxdoc/nuxeo-3d/</home-page>
     <vendor>Nuxeo</vendor>
     <installer restart="true" />
     <uninstaller restart="true" />
