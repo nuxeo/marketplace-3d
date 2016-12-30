@@ -7,13 +7,11 @@
     <parent>
         <groupId>org.nuxeo.marketplace.threed</groupId>
         <artifactId>marketplace-3d-parent</artifactId>
-        <version>8.4-SNAPSHOT</version>
+        <version>9.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.nuxeo.marketplace.threed</groupId>
     <artifactId>marketplace-3d</artifactId>
     <packaging>zip</packaging>
-
 
     <dependencyManagement>
         <dependencies>
@@ -31,12 +29,12 @@
     <dependencies>
         <dependency>
             <groupId>org.nuxeo.ecm.distribution</groupId>
-            <artifactId>nuxeo-distribution-cap</artifactId>
+            <artifactId>nuxeo-nxr-server</artifactId>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.nuxeo.ecm.distribution</groupId>
-            <artifactId>nuxeo-distribution-cap</artifactId>
+            <artifactId>nuxeo-nxr-server</artifactId>
             <type>zip</type>
             <scope>provided</scope>
         </dependency>
@@ -44,27 +42,22 @@
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-3d-api</artifactId>
-            <version>8.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-3d-convert</artifactId>
-            <version>8.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-3d-core</artifactId>
-            <version>8.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-3d-jsf</artifactId>
-            <version>8.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-3d-web-ui</artifactId>
-            <version>8.4-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

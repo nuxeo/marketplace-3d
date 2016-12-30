@@ -27,7 +27,7 @@
 
         <!-- Base distribution NXR -->
         <copy todir="${outdir}">
-            <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-distribution-cap::zip" />
+            <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-nxr-server::zip" />
         </copy>
 
         <!-- Nuxeo bundles -->
@@ -56,15 +56,15 @@
         <nx:rmdups dir="${outdir}/nxr/lib" />
         <zip destfile="${outdir}/nxr-${maven.project.version}.zip" basedir="${outdir}/nxr" />
         <nx:zipdiff file1="${outdir}/nxr-${maven.project.version}.zip"
-                    file2="${outdir}/nuxeo-distribution-cap-${nuxeo.distribution.version}.zip"
+                    file2="${outdir}/nuxeo-nxr-server-${nuxeo.distribution.version}.zip"
                     includesfile="${outdir}/includes"
                     excludesfile="${outdir}/excludesfile"
-                    patternsetid="threed.versus.cap"
+                    patternsetid="threed.versus.server"
                     ignoreContent="false"
                     ignoreContentPattern=".*\.jar$">
         </nx:zipdiff>
         <unzip src="${outdir}/nxr-${maven.project.version}.zip" dest="${outdir}/marketplace/install">
-            <patternset refid="threed.versus.cap" />
+            <patternset refid="threed.versus.server" />
         </unzip>
 
 
