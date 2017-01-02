@@ -1,80 +1,80 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.nuxeo.marketplace.threed</groupId>
-        <artifactId>parent</artifactId>
-        <version>9.1-SNAPSHOT</version>
-    </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.nuxeo.marketplace.threed</groupId>
+    <artifactId>parent</artifactId>
+    <version>9.1-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>marketplace</artifactId>
-    <packaging>zip</packaging>
-    <name>3D Marketplace Package</name>
+  <artifactId>marketplace</artifactId>
+  <packaging>zip</packaging>
+  <name>3D Marketplace Package</name>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Import Nuxeo BOM -->
-            <dependency>
-                <groupId>org.nuxeo.ecm.distribution</groupId>
-                <artifactId>nuxeo-distribution</artifactId>
-                <version>${nuxeo.distribution.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
+  <dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>org.nuxeo.ecm.distribution</groupId>
-            <artifactId>nuxeo-nxr-server</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.distribution</groupId>
-            <artifactId>nuxeo-nxr-server</artifactId>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.distribution</groupId>
-            <artifactId>nuxeo-nxr-jsf-ui</artifactId>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.nuxeo.ecm.platform</groupId>
-            <artifactId>nuxeo-platform-3d-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.platform</groupId>
-            <artifactId>nuxeo-platform-3d-convert</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.platform</groupId>
-            <artifactId>nuxeo-platform-3d-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.platform</groupId>
-            <artifactId>nuxeo-platform-3d-jsf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.nuxeo.ecm.platform</groupId>
-            <artifactId>nuxeo-platform-3d-web-ui</artifactId>
-        </dependency>
+      <!-- Import Nuxeo BOM -->
+      <dependency>
+        <groupId>org.nuxeo.ecm.distribution</groupId>
+        <artifactId>nuxeo-distribution</artifactId>
+        <version>${nuxeo.distribution.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
+  </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.nuxeo.build</groupId>
-                <artifactId>ant-assembly-maven-plugin</artifactId>
-                <configuration>
-                    <buildFiles>
-                        <buildFile>${basedir}/src/main/assemble/assembly.xml</buildFile>
-                    </buildFiles>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.nuxeo.ecm.distribution</groupId>
+      <artifactId>nuxeo-nxr-server</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.distribution</groupId>
+      <artifactId>nuxeo-nxr-server</artifactId>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.distribution</groupId>
+      <artifactId>nuxeo-nxr-jsf-ui</artifactId>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-3d-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-3d-convert</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-3d-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-3d-jsf</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.platform</groupId>
+      <artifactId>nuxeo-platform-3d-web-ui</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.nuxeo.build</groupId>
+        <artifactId>ant-assembly-maven-plugin</artifactId>
+        <configuration>
+          <buildFiles>
+            <buildFile>${basedir}/src/main/assemble/assembly.xml</buildFile>
+          </buildFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
