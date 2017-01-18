@@ -21,6 +21,9 @@
     <package>nuxeo-jsf-ui</package>
     <package>nuxeo-web-ui</package>
   </optional-dependencies>
+  <dependencies>
+    <package>nuxeo-dam</package>
+  </dependencies>
   <license>AL 2.0</license>
   <license-url>http://www.apache.org/licenses/LICENSE-2.0.html</license-url>
   <visibility>PUBLIC</visibility>

@@ -12,6 +12,10 @@
   <name>3D packaging parent POM</name>
   <version>9.1-SNAPSHOT</version>
 
+  <properties>
+    <nuxeo.dam.nxr.version>6.3.0-SNAPSHOT</nuxeo.dam.nxr.version>
+  </properties>
+
   <modules>
     <module>marketplace</module>
     <module>ftest/funkload</module>
@@ -25,6 +29,13 @@
         <groupId>org.nuxeo.marketplace.threed</groupId>
         <artifactId>marketplace</artifactId>
         <version>${project.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.marketplace.dam</groupId>
+        <artifactId>marketplace</artifactId>
+        <classifier>nxr-server</classifier>
+        <version>${nuxeo.dam.nxr.version}</version>
         <type>zip</type>
       </dependency>
     </dependencies>
