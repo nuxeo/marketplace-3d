@@ -10,7 +10,7 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>3D packaging parent POM</name>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <nuxeo.dam.nxr.version>6.2.3</nuxeo.dam.nxr.version>
