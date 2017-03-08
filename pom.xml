@@ -38,6 +38,12 @@
         <version>${nuxeo.dam.nxr.version}</version>
         <type>zip</type>
       </dependency>
+      <dependency>
+        <groupId>org.nuxeo.marketplace.dam</groupId>
+        <artifactId>marketplace</artifactId>
+        <version>${nuxeo.dam.nxr.version}</version>
+        <type>zip</type>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
