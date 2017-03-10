@@ -28,8 +28,9 @@
     <!-- Base distribution NXR -->
     <copy todir="${outdir}">
       <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-nxr-server::zip" />
+      <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-nxr-jsf-ui::zip" />
       <!-- DAM NXR -->
-      <artifact:file key="org.nuxeo.marketplace.dam:marketplace::zip:nxr-server" />
+      <artifact:file key="org.nuxeo.marketplace.dam:marketplace::zip:nxr-jsf" />
     </copy>
 
     <!-- Nuxeo bundles -->
@@ -59,7 +60,9 @@
 
     <unzip src="${outdir}/nuxeo-nxr-server-${nuxeo.distribution.version}.zip"
            dest="${outdir}/nuxeo-nxr-all" />
-    <unzip src="${outdir}/marketplace-${nuxeo.dam.nxr.version}-nxr-server.zip"
+    <unzip src="${outdir}/nuxeo-nxr-jsf-ui-${nuxeo.distribution.version}.zip"
+           dest="${outdir}/nuxeo-nxr-all" />
+    <unzip src="${outdir}/marketplace-${nuxeo.dam.nxr.version}-nxr-jsf.zip"
            dest="${outdir}/nuxeo-nxr-all" />
     <zip destfile="${outdir}/nuxeo-nxr-all-${nuxeo.distribution.version}.zip"
          basedir="${outdir}/nuxeo-nxr-all" />

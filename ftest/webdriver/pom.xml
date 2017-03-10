@@ -26,7 +26,7 @@
     </dependency>
     <dependency>
       <groupId>org.nuxeo.marketplace.threed</groupId>
-      <artifactId>marketplace</artifactId>
+      <artifactId>marketplace-3d</artifactId>
       <type>zip</type>
       <scope>test</scope>
     </dependency>
@@ -41,6 +41,12 @@
       <artifactId>nuxeo-marketplace-jsf-ui</artifactId>
       <type>zip</type>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.marketplace.dam</groupId>
+      <artifactId>marketplace</artifactId>
+      <version>${nuxeo.dam.nxr.version}</version>
+      <type>zip</type>
     </dependency>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
@@ -87,6 +93,7 @@
               <argLine>-Dlog4j.configuration=${file.uri.prefix}${basedir}/src/test/resources/log4j.xml
                 -Dnuxeo.log.dir=${project.build.directory}
               </argLine>
+              <reportNameSuffix>3d</reportNameSuffix>
             </configuration>
           </execution>
         </executions>

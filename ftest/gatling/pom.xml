@@ -48,13 +48,25 @@
     </dependency>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
+      <artifactId>nuxeo-marketplace-jsf-ui</artifactId>
+      <type>zip</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.marketplace.dam</groupId>
+      <artifactId>marketplace</artifactId>
+      <version>${nuxeo.dam.nxr.version}</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.ecm.distribution</groupId>
       <artifactId>nuxeo-jsf-ui-gatling-tests</artifactId>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.nuxeo.marketplace.threed</groupId>
-      <artifactId>marketplace</artifactId>
+      <artifactId>marketplace-3d</artifactId>
       <type>zip</type>
       <scope>test</scope>
     </dependency>

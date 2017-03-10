@@ -27,14 +27,14 @@
     <dependencies>
       <dependency>
         <groupId>org.nuxeo.marketplace.threed</groupId>
-        <artifactId>marketplace</artifactId>
+        <artifactId>marketplace-3d</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.marketplace.dam</groupId>
         <artifactId>marketplace</artifactId>
-        <classifier>nxr-server</classifier>
+        <classifier>nxr-jsf</classifier>
         <version>${nuxeo.dam.nxr.version}</version>
         <type>zip</type>
       </dependency>

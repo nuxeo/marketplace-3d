@@ -33,12 +33,17 @@
     </antcall>
   </target>
 
-  <target name="copy-marketplace">
+  <property name="mp.install" value="file:${out.dir}/nuxeo-marketplace-jsf-ui-${nuxeo.distribution.version}.zip,
+    file:${out.dir}/marketplace-${nuxeo.dam.nxr.version}.zip,
+    file:${out.dir}/marketplace-3d-${maven.project.version}.zip" />
+  <target name="copy-marketplace" depends="_init,prepare-db,prepare-tomcat">
     <copy todir="${out.dir}">
-      <artifact:file key="org.nuxeo.marketplace.threed:marketplace::zip" />
+      <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-marketplace-jsf-ui::zip" />
+      <artifact:file key="org.nuxeo.marketplace.dam:marketplace::zip" />
+      <artifact:file key="org.nuxeo.marketplace.threed:marketplace-3d::zip" />
     </copy>
   </target>
 
   <!-- Instruction for installing the MP to be tested -->
-  <property name="mp.install" value="file:${out.dir}/marketplace-${maven.project.version}.zip" />
+  <property name="mp.install" value="file:${out.dir}/marketplace-3d-${maven.project.version}.zip" />
 </project>
