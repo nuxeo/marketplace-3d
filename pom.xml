@@ -18,10 +18,18 @@
 
   <modules>
     <module>marketplace</module>
-    <module>ftest/funkload</module>
-    <module>ftest/gatling</module>
-    <module>ftest/webdriver</module>
   </modules>
+
+  <profiles>
+    <profile>
+      <id>ftest</id>
+      <modules>
+        <module>ftest/funkload</module>
+        <module>ftest/gatling</module>
+        <module>ftest/webdriver</module>
+      </modules>
+    </profile>
+  </profiles>
 
   <dependencyManagement>
     <dependencies>
