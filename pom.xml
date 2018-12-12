@@ -3,17 +3,17 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>10.3-SNAPSHOT</version>
+    <version>10.3</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.threed</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>3D packaging parent POM</name>
-  <version>1.2.2-SNAPSHOT</version>
+  <version>1.2.2</version>
 
   <properties>
-    <nuxeo.dam.nxr.version>6.4.2-SNAPSHOT</nuxeo.dam.nxr.version>
+    <nuxeo.dam.nxr.version>6.4.2</nuxeo.dam.nxr.version>
   </properties>
 
   <modules>
