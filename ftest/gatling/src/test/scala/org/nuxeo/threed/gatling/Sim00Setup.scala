@@ -1,7 +1,5 @@
-package org.nuxeo.threed.gatling
-
 /*
- * (C) Copyright 2017 Nuxeo SA (http://nuxeo.com/) and others.
+ * (C) Copyright 2017-2019 Nuxeo (http://nuxeo.com/) and others.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +14,9 @@ package org.nuxeo.threed.gatling
  * limitations under the License.
  *
  * Contributors:
- *     Benoit Delbosc
- *     Antoine Taillefer
+ *     Miguel Nixo
  */
+package org.nuxeo.threed.gatling
 
 import io.gatling.core.Predef._
 import io.gatling.core.config.GatlingFiles
@@ -48,12 +46,12 @@ object Setup {
 class Sim00Setup extends Simulation {
 
   val httpProtocol = http
-    .baseURL(Parameters.getBaseUrl())
+    .baseUrl(Parameters.getBaseUrl())
     .disableWarmUp
     .acceptEncodingHeader("gzip, deflate")
     .connectionHeader("keep-alive")
 
-  val userCount = Source.fromFile(GatlingFiles.dataDirectory + "/gatling-users.csv").getLines.size - 1
+  val userCount = Source.fromFile(GatlingFiles.resourcesDirectory + "/data/gatling-users.csv").getLines.size - 1
   val scn = Setup.get(userCount)
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
