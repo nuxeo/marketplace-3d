@@ -24,7 +24,6 @@
     <profile>
       <id>ftest</id>
       <modules>
-        <module>ftest/funkload</module>
         <module>ftest/gatling</module>
         <module>ftest/webdriver</module>
       </modules>
