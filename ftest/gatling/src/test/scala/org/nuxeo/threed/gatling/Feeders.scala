@@ -28,6 +28,6 @@ object Feeders {
 
   val usersQueue = csv("data/gatling-users.csv").queue
   val users = csv("data/gatling-users.csv").circular
-  val admins = csv("admins.csv").circular
+  val admins = csv("data/admins.csv").circular
 
 }
